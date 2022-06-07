@@ -1,27 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,900&display=swap');
 
 body {
-    margin: 0
+    margin: 0;
+    font-family: Lato, sans-serif;
 }
 
 .header {
-    background-color: #222222;
+    background: #222222;
     height: 75px;
     padding: 18px 16px;
     box-sizing: border-box;
 }
 
-.container {
+.header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
 @media (min-width: 1600px) {
     .container {
         margin: 0 auto;
         width: 1140px;
+    }
+
+    .header {
+        padding-left: 230px;
+        padding-right: 230px;
     }
 }
 
@@ -29,13 +34,6 @@ body {
     .header {
         padding-left: 32px;
         padding-right: 32px;
-    }
-}
-
-@media(min-width:1600px) {
-    .header {
-        padding-left: 230px;
-        padding-right: 230px;
     }
 }
 
@@ -50,7 +48,6 @@ body {
 
 .cart_icon_numb {
     position: relative;
-
 }
 
 .indacart {
@@ -64,20 +61,15 @@ body {
         width: 19px;
         height: 19px;
         color: white;
-        background-color: #F16d7F;
+        background-color: #F16D7F;
         border-radius: 50%;
         position: absolute;
         text-align: center;
         right: -8px;
         top: -19px;
-        font-family: Lato, sans-serif;
         font-size: 12px;
         line-height: 19px;
     }
-}
-
-
-@media (min-width: 768px) {
 
     .user_icon,
     .cart_icon {
@@ -90,4 +82,175 @@ body {
     }
 }
 
-/* luxurious fashion*/
+
+.brand {
+    min-height: 363px;
+}
+
+.brand_left img {
+    display: block;
+    width: 100%;
+}
+
+.brand_left {
+    display: none;
+}
+
+.brand_right {
+    background: #F1E4E6;
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222222;
+
+}
+
+.brand_text {
+    border-left: 12px solid #F16D7F;
+    padding-left: 15px;
+    height: 61px;
+}
+
+.brand_text div:first-child {
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 27px;
+}
+
+.brand_text div:last-child {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 14px;
+}
+
+.brand_text span {
+    color: #F16D7F;
+}
+
+@media(min-width:768px) {
+    .brand_left {
+        display: block;
+        width: 50%;
+    }
+
+    .brand_right {
+        justify-content: flex-start;
+    }
+
+    .brand {
+        display: flex;
+    }
+
+    .brand>div {
+        width: 50%;
+    }
+
+    .brand_text {
+        height: 78px;
+        margin-left: 60px;
+    }
+
+    .brand_text div:first-child {
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 33px;
+    }
+
+}
+
+@media (min-width: 1600px) {
+    .brand_right {
+        justify-content: flex-start;
+    }
+
+    .brand_text {
+        margin-left: 64px;
+    }
+
+    .brand_text div:first-child {
+        font-size: 48px;
+    }
+
+    .brand_text div:last-child {
+        font-size: 32px;
+        margin-top: 21px;
+    }
+}
+
+.offer {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 247px)111px;
+    row-gap: 32px;
+    padding: 64px 16px;
+
+}
+
+.offer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.offer_images {
+    height: 247px;
+}
+
+.offer_img_wide {
+    height: 111px;
+}
+
+
+.offer>div {
+    position: relative;
+}
+
+.offer_title {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+
+}
+
+.offer_ttl_t {
+    color: white;
+}
+
+.offer_ttl_b {
+    color: #F16D7F;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+}
+
+@media (min-width: 768px) {
+    .offer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 167px 116px;
+        gap: 20px;
+    }
+
+    .offer_acc {
+        grid-column: 1/-1;
+    }
+}
+
+
+
+.menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
